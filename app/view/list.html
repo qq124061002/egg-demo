@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+    <div class="page-container">
+        <p class='page-title'>这是{{title}}页</p>
+        <div class="list-box">
+            {% for item in listArr %}
+                <a href={{ '/news/detail/' + item.id }}>
+                    <div class="list-item">
+                        <span class="text">{{item.title}}</span>
+                        <span class="time">{{item.time}}</span>
+                    </div>
+                </a>
+            {% else %}
+                新闻列表为空
+            {% endfor %}
+        </div>
+    </div>
+    <script>
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编辑页</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+    <div class="page-container">
+        <p class='page-title'>这是新闻编辑页</p>
+        <div class="list-box">
+            {% for item in listArr %}
+                <div class="list-item">
+                    <span class="text">{{item.title}}</span>
+                    <span class="edit"><a href={{ '/admin/edit/' + item.id }}> 修改 </a></span>
+                    <span class="delete"><a href={{ '/admin/delete/' + item.id }}> 删除 </a></span>
+                </div>
+            {% else %}
+                新闻列表为空
+            {% endfor %}
+            <div class="list-item">
+                <span class="add"><a href='/admin/add/'> 新增 </a></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

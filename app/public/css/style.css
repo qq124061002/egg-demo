@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+.page-title{
+    text-align: center;
+}
+.page-time{
+    text-align: center;
+    font-size: 15px;
+}
+.page-container{
+    width: 500px;
+}
+
+.list-box{
+    padding: 15px;
+    border: 1px solid;
+}
+
+.list-item{
+    display: flex;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+a{
+    color: blue;
+    text-decoration: none;
+}
+
+.text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+}
+
+.time{
+    flex: 0 0 60px;
+    text-align: right;
+}
+
+.edit,.delete,.add{
+    flex: 0 0 50px;
+    text-align: center;
+}
+
+.field-item{
+    padding-bottom: 15px;
+    display: flex;
+}
+
+.field-item .label{
+    flex: 0 0 80px;
+}
+
+.field-item .value{
+    flex: 1;
+}
+
+.submit-btn{
+    margin-left: 80px;
+    width: 80px;
+}
